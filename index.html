@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Starter Pack เปิดร้านยาใหม่</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Pharmacy Starter Pack</p>
+        <h1>รายการยาสำหรับเปิดร้านยาใหม่</h1>
+      </div>
+      <div class="source-pill" id="lastUpdated">อัปเดตจากชีต</div>
+    </header>
+
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="ตัวกรองรายการยา">
+        <div class="search-box">
+          <label for="searchInput">ค้นหา</label>
+          <input id="searchInput" type="search" placeholder="ชื่อยา กลุ่มยา หรือหมายเหตุ" autocomplete="off" />
+        </div>
+
+        <div class="segment" role="tablist" aria-label="เลือกคลังยา">
+          <button class="active" type="button" data-section="all">ทั้งหมด</button>
+          <button type="button" data-section="inside">ยาข้างใน</button>
+          <button type="button" data-section="outside">ยาข้างนอก</button>
+        </div>
+
+        <div class="category-list" id="categoryList"></div>
+      </aside>
+
+      <section class="content">
+        <section class="summary-band" aria-label="ภาพรวม">
+          <div class="summary-copy">
+            <h2>เช็กลิสต์สั่งยารอบแรก</h2>
+            <p>รวมรายการจากไฟล์ STOCK ยาข้างใน และ STOCK ยาข้างนอก พร้อมกลุ่มยา จำนวนแนะนำ และหมายเหตุจากชีตต้นฉบับ</p>
+          </div>
+          <div class="stats-grid" id="statsGrid"></div>
+        </section>
+
+        <section class="notes-band" id="notesBand"></section>
+
+        <div class="result-head">
+          <div>
+            <p class="eyebrow">รายการที่แสดง</p>
+            <h2 id="resultTitle">ทั้งหมด</h2>
+          </div>
+          <span id="resultCount"></span>
+        </div>
+
+        <section class="inventory" id="inventory"></section>
+      </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
